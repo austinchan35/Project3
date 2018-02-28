@@ -1,0 +1,24 @@
+import urllib.request
+import urllib.parse
+import re
+
+
+print (input("Hello Austin, Click any key to begin. Or not."))
+
+url = 'https://s3.amazonaws.com/tcmg476/http_access_log'
+cal = str(urllib.request.urlopen(url).read())
+
+file = open("austin.txt","w") 
+file.write(cal)
+
+
+total= ()
+total = re.findall(r' - - ', cal)
+
+print ("\n1.How many total requests were made in the time period represented in the log?")
+print (" ")
+print (len(total))
+
+print ("I'm sorry Adam")
+
+print ("\nPlease. give me an A. or B?")
